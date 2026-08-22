@@ -8,7 +8,7 @@
         :root {
             --bg-color: #0d0f12;
             --card-bg: #161a1f;
-            --accent: #2ecc71;
+            --accent: #b4f318;
             --text-main: #f0f3f6;
             --text-muted: #8b949e;
             --border: #2d333b;
@@ -22,29 +22,49 @@
             padding: 40px 20px;
         }
         .container { max-width: 800px; margin: 0 auto; }
-        header { text-align: center; margin-bottom: 50px; }
-        .logo-mark {
-            display: inline-block;
-            width: 50px;
-            height: 50px;
-            border: 4px solid var(--accent);
-            transform: rotate(45deg);
-            margin-bottom: 20px;
+        header { 
+            text-align: center; 
+            margin-bottom: 40px; 
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
-        h1 { font-size: 2.2rem; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 8px; }
-        p.subtitle { color: var(--text-muted); font-size: 1.1rem; }
+        .logo-img {
+            max-width: 320px;
+            width: 100%;
+            height: auto;
+            border-radius: 12px;
+            margin-bottom: 15px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+        }
+        p.subtitle { 
+            color: var(--text-muted); 
+            font-size: 1.1rem; 
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
         
-        .section-title { font-size: 1.3rem; margin: 40px 0 20px; border-bottom: 1px solid var(--border); padding-bottom: 8px; }
+        .section-title { 
+            font-size: 1.3rem; 
+            margin: 40px 0 20px; 
+            border-bottom: 1px solid var(--border); 
+            padding-bottom: 8px; 
+        }
         
         .card {
             background-color: var(--card-bg);
             border: 1px solid var(--border);
-            border-radius: 8px;
+            border-radius: 10px;
             padding: 24px;
             margin-bottom: 20px;
+            transition: transform 0.2s ease, border-color 0.2s ease;
+        }
+        .card:hover {
+            border-color: var(--accent);
+            transform: translateY(-2px);
         }
         .card-tag {
-            background-color: rgba(46, 204, 113, 0.15);
+            background-color: rgba(180, 243, 24, 0.15);
             color: var(--accent);
             padding: 4px 10px;
             border-radius: 4px;
@@ -52,6 +72,7 @@
             font-weight: bold;
             display: inline-block;
             margin-bottom: 12px;
+            letter-spacing: 0.5px;
         }
         .card h3 { font-size: 1.4rem; margin-bottom: 8px; }
         .card p { color: var(--text-muted); font-size: 0.95rem; }
@@ -65,9 +86,14 @@
             border-radius: 6px;
             text-decoration: none;
             font-size: 0.9rem;
-            transition: border-color 0.2s, color 0.2s;
+            font-weight: 500;
+            transition: border-color 0.2s, color 0.2s, background-color 0.2s;
         }
-        .btn:hover { border-color: var(--accent); color: var(--accent); }
+        .btn:hover { 
+            border-color: var(--accent); 
+            color: var(--accent); 
+            background-color: rgba(180, 243, 24, 0.05);
+        }
         
         footer {
             margin-top: 60px;
@@ -78,19 +104,19 @@
             padding-top: 20px;
         }
         footer a { color: var(--accent); text-decoration: none; }
+        footer a:hover { text-decoration: underline; }
     </style>
 </head>
 <body>
     <div class="container">
         <header>
-            <div class="logo-mark"></div>
-            <h1>Apscento</h1>
+            <img src="logo.png" alt="Apscento Logo" class="logo-img">
             <p class="subtitle">Mobile App Studio</p>
         </header>
 
         <section>
             <h2 class="section-title">O studiu</h2>
-            <p>Projektujemy i wdrażamy przejrzyste, zoptymalizowane narzędzia mobilne. Skupiamy się na wydajności, przejrzystej analityce oraz intuicyjnym interfejsie.</p>
+            <p>Projektujemy i wdrażamy przejrzyste, zoptymalizowane narzędzia mobilne. Skupiamy się na wydajności, analityce oraz intuicyjnym interfejsie dopasowanym do codziennych potrzeb użytkowników.</p>
         </section>
 
         <section>
@@ -105,11 +131,11 @@
         <section>
             <h2 class="section-title">Społeczność i kontakt</h2>
             <div class="links">
-                <a href="mailto:apscento@gmail.com" class="btn">📧 Kontakt: apscento@gmail.com</a>
-                <a href="https://instagram.com/apscento.dev" target="_blank" class="btn">Instagram</a>
-                <a href="https://reddit.com/r/apscento" target="_blank" class="btn">Reddit (r/apscento)</a>
-                <a href="https://www.tiktok.com/@apscento" target="_blank" class="btn">TikTok</a>
-                <a href="https://x.com/apscento" target="_blank" class="btn">X (Twitter)</a>
+                <a href="mailto:apscento@gmail.com" class="btn">📧 apscento@gmail.com</a>
+                <a href="https://instagram.com/apscento.dev" target="_blank" rel="noopener noreferrer" class="btn">Instagram</a>
+                <a href="https://reddit.com/r/apscento" target="_blank" rel="noopener noreferrer" class="btn">Reddit (r/apscento)</a>
+                <a href="https://www.tiktok.com/@apscento" target="_blank" rel="noopener noreferrer" class="btn">TikTok</a>
+                <a href="https://x.com/apscento" target="_blank" rel="noopener noreferrer" class="btn">X (Twitter)</a>
             </div>
         </section>
 
