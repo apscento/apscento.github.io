@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Driverstat | Apscento</title>
+    <style>
+        :root {
+            --bg-color: #0d0f12;
+            --card-bg: #161a1f;
+            --accent: #b4f318;
+            --text-main: #f0f3f6;
+            --text-muted: #8b949e;
+            --border: #2d333b;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            padding: 40px 20px;
+        }
+        .container { max-width: 800px; margin: 0 auto; }
+        .back-link {
+            display: inline-block;
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.9rem;
+            margin-bottom: 20px;
+        }
+        .back-link:hover { color: var(--accent); }
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .logo-img {
+            max-width: 320px;
+            width: 100%;
+            height: auto;
+            border-radius: 12px;
+            margin-bottom: 15px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+        }
+        p.subtitle {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .section-title {
+            font-size: 1.3rem;
+            margin: 40px 0 20px;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 8px;
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 24px;
+            margin-bottom: 20px;
+            transition: transform 0.2s ease, border-color 0.2s ease;
+        }
+        .card:hover {
+            border-color: var(--accent);
+            transform: translateY(-2px);
+        }
+        .card-tag {
+            background-color: rgba(180, 243, 24, 0.15);
+            color: var(--accent);
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            display: inline-block;
+            margin-bottom: 12px;
+            letter-spacing: 0.5px;
+        }
+        .card h3 { font-size: 1.4rem; margin-bottom: 8px; }
+        .card p { color: var(--text-muted); font-size: 0.95rem; }
+
+        .features { list-style: none; margin-top: 12px; }
+        .features li {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            padding-left: 20px;
+            position: relative;
+            margin-bottom: 8px;
+        }
+        .features li::before {
+            content: "→";
+            color: var(--accent);
+            position: absolute;
+            left: 0;
+        }
+
+        .screens {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 16px;
+            margin-top: 20px;
+        }
+        .screens img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            border: 1px solid var(--border);
+            display: block;
+        }
+
+        .changelog-item {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 20px 24px;
+            margin-bottom: 16px;
+        }
+        .changelog-version {
+            color: var(--accent);
+            font-weight: bold;
+            font-size: 1rem;
+        }
+        .changelog-date {
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            margin-bottom: 10px;
+        }
+        .changelog-item ul {
+            margin-top: 8px;
+            padding-left: 20px;
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+        .changelog-item li { margin-bottom: 4px; }
+
+        .links { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 20px; }
+        .btn {
+            background-color: var(--card-bg);
+            color: var(--text-main);
+            border: 1px solid var(--border);
+            padding: 10px 16px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: border-color 0.2s, color 0.2s, background-color 0.2s;
+        }
+        .btn:hover {
+            border-color: var(--accent);
+            color: var(--accent);
+            background-color: rgba(180, 243, 24, 0.05);
+        }
+
+        footer {
+            margin-top: 60px;
+            text-align: center;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            border-top: 1px solid var(--border);
+            padding-top: 20px;
+        }
+        footer a { color: var(--accent); text-decoration: none; }
+        footer a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="../index.html" class="back-link">&larr; Powrót do Apscento</a>
+
+        <header>
+            <img src="../logofirmy.png" alt="Apscento Logo" class="logo-img" />
+            <p class="subtitle">Driverstat</p>
+        </header>
+
+        <section>
+            <h2 class="section-title">O aplikacji</h2>
+            <div class="card">
+                <span class="card-tag">W ROZWOJU</span>
+                <h3>Driverstat</h3>
+                <p>
+                    Aplikacja analityczna dla kierowców. Driverstat pozwala na bieżąco monitorować kluczowe
+                    statystyki pracy, kontrolować prowizje i koszty oraz precyzyjnie prognozować i kalkulować
+                    realne zarobki w ujęciu tygodniowym. Wszystko w jednym, przejrzystym miejscu na telefonie.
+                </p>
+                <ul class="features">
+                    <li>Panel z podsumowaniem dziennych i tygodniowych zarobków</li>
+                    <li>Kontrola prowizji, kosztów paliwa i innych wydatków</li>
+                    <li>Analityka i statystyki jazd w czasie</li>
+                    <li>Prognozowanie realnych zarobków w ujęciu tygodniowym</li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h2 class="section-title">Zrzuty ekranu</h2>
+            <div class="screens">
+                <img src="screens/dashboard.png" alt="Driverstat - panel główny" loading="lazy">
+                <img src="screens/analytics.png" alt="Driverstat - analityka" loading="lazy">
+            </div>
+        </section>
+
+        <section>
+            <h2 class="section-title">Historia aktualizacji</h2>
+
+            <div class="changelog-item">
+                <div class="changelog-version">v0.1.0</div>
+                <div class="changelog-date">Sierpień 2026</div>
+                <ul>
+                    <li>Pierwsza wersja robocza aplikacji w rozwoju</li>
+                    <li>Podstawowy panel statystyk kierowcy</li>
+                </ul>
+            </div>
+
+            <!--
+                Aby dodać nową aktualizację, skopiuj powyższy blok .changelog-item
+                i wklej go NAD nim (najnowsze na górze), zmieniając numer wersji,
+                datę oraz listę zmian.
+            -->
+        </section>
+
+        <footer>
+            <p>&copy; 2026 Apscento. Wszelkie prawa zastrzeżone.</p>
+            <p style="margin-top: 8px;"><a href="https://apscento.github.io/privacy-policy/">Regulamin i Polityka Prywatności</a></p>
+        </footer>
+    </div>
+</body>
+</html>
