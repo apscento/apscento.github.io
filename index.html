@@ -59,6 +59,15 @@
             margin-bottom: 20px;
             transition: transform 0.2s ease, border-color 0.2s ease;
         }
+        /* Unikalny styl dla kafelka Pinio na stronie głównej */
+.card-pinio:hover {
+    border-color: #E8562A !important; /* Pomarańczowy akcent Pinio */
+    transform: translateY(-2px);
+}
+.card-pinio .card-tag {
+    background-color: rgba(232, 86, 42, 0.15);
+    color: #E8562A;
+}
         .card:hover {
             border-color: var(--accent);
             transform: translateY(-2px);
@@ -120,7 +129,7 @@
         </section>
 
         <section>
-            <h2 class="section-title">Nadchodzące projekty</h2>
+            <h2 class="section-title">Projekty</h2>
             <a href="driverstat/index.html" style="text-decoration: none; color: inherit;">
             <div class="card">
                 <span class="card-tag">W ROZWOJU</span>
@@ -129,7 +138,7 @@
             </div>
             </a>
             <a href="Pinio/index.html" style="text-decoration: none; color: inherit;">
-    <div class="card">
+    <div class="card card-pinio">
         <span class="card-tag">W ROZWOJU</span>
         <h3>Pinio</h3>
         <p>Aplikacja społecznościowo-podróżnicza z mapą spotów, systemem wyjazdów, wydatków oraz unikalnym systemem osiągnięć i odznak.</p>
