@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 250 64" role="img" aria-labelledby="title description">
+  <title id="title">Apscento</title>
+  <desc id="description">Minimalistyczny znak Apscento i nazwa studia</desc>
+  <g fill="none" stroke="#11120f" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M8 45 21.5 12 35 45M13.5 32h16"/>
+    <path d="M39 20c-3.5-5-12-4.5-12 1.5 0 7 14 4 14 13 0 7.5-10.5 11-17 5.5"/>
+  </g>
+  <circle cx="40" cy="10" r="5" fill="#baff12"/>
+  <text x="58" y="40" fill="#11120f" font-family="Manrope, Arial, sans-serif" font-size="25" font-weight="500" letter-spacing="2">APSCENTO</text>
+</svg>
