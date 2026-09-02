@@ -36,4 +36,5 @@ button{font:inherit}
 .dashboard-preview{height:auto;overflow:visible;border-radius:30px;padding:42px}.app-screen-hero{width:auto;max-width:100%;height:min(760px,72vh);border-radius:38px;object-fit:contain}
 @media(max-width:800px){.dashboard-preview{height:auto;padding:28px 20px}.app-screen-hero{height:min(680px,72vh)}}
 @media(max-width:480px){.dashboard-preview{height:auto;padding:20px;margin-top:60px}.app-screen-hero{height:min(620px,72vh);border-radius:26px}}
+.app-screen-hero{width:min(341px,100%);height:auto;aspect-ratio:1280/2856;flex:none;border-radius:38px;object-fit:contain}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important}}
