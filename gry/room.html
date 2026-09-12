@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="pl"><head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#141510"><title>Pokój Milionerów — Apscento</title>
+  <link rel="icon" href="logo.svg"><link rel="stylesheet" href="styles.css"><link rel="stylesheet" href="room.css"><script src="supabase-config.js"></script><script src="qrcode.js"></script><script src="room.js" defer></script>
+</head><body>
+  <a class="skip-link" href="#room-main">Przejdź do pokoju</a>
+  <header class="shell header"><a class="brand" href="index.html"><img src="logo.svg" width="180" height="46" alt="Apscento — wybór gier"></a><a class="back-link" href="index.html">← Wybór gier</a><span class="edition"><i></i> Milionerzy</span></header>
+  <main id="room-main" class="shell room-main">
+    <p class="eyebrow">APSCENTO / MILIONERZY</p>
+    <section id="setup" class="room-setup">
+      <div class="room-intro"><h1>Zbierzcie się.<br><em>Zaraz zaczynamy.</em></h1><p>Duży ekran dla całej ekipy.<br>Własne miejsce dla każdego gracza.</p><div class="room-stage">01 <span>Pokój</span> <b>→</b> 02 <span>Ekipa</span> <b>→</b> 03 <span>Gotowość</span></div></div>
+      <div class="setup-panel">
+        <div class="mode-switch" aria-label="Wybierz swoją rolę"><button type="button" id="host-mode" aria-pressed="false">Organizuję</button><button type="button" id="join-mode" aria-pressed="true">Dołączam</button></div>
+        <form id="host-form" hidden><h2>Twój ekran, wasza gra.</h2><p>Utwórz pokój i zaproś ekipę. Organizator nie zajmuje miejsca gracza.</p><label for="capacity">Maksymalna liczba graczy</label><select id="capacity" name="capacity"><option>2</option><option>4</option><option>6</option><option selected>8</option><option>10</option><option>12</option></select><button type="submit" class="primary">Utwórz pokój <span aria-hidden="true">→</span></button></form>
+        <form id="join-form"><h2>Ekipa już czeka.</h2><p>Wpisz kod ze wspólnego ekranu i daj znać, jak się do ciebie zwracać.</p><label for="code">Kod pokoju</label><input id="code" name="code" inputmode="numeric" autocomplete="off" pattern="[0-9]{6}" minlength="6" maxlength="6" placeholder="np. 482916" required><label for="nickname">Twój pseudonim</label><input id="nickname" name="nickname" autocomplete="nickname" minlength="2" maxlength="20" placeholder="np. Piotrek" required><button type="submit" class="primary">Dołącz do ekipy <span aria-hidden="true">→</span></button></form>
+      </div>
+    </section>
+    <section id="lobby" hidden aria-labelledby="lobby-heading">
+      <div class="lobby-heading"><div><h1 id="lobby-heading" tabindex="-1">Poczekalnia.</h1><p id="lobby-subtitle"></p></div><span id="connection" role="status">Łączenie…</span></div>
+      <div class="lobby-grid"><aside class="invite-panel"><p class="eyebrow">KOD WASZEGO POKOJU</p><strong id="room-code"></strong><p>Dołącz z telefonu, używając tego kodu.</p><div id="host-invite" hidden><label for="join-address">Adres komputera w sieci Wi-Fi</label><select id="join-address"></select><img id="join-qr" alt="Kod QR prowadzący do pokoju"><span class="join-link-label">Pełny link do pokoju</span><a id="join-link" target="_blank" rel="noopener">Otwórz ekran dołączania ↗</a><button type="button" class="secondary" id="copy-link">Kopiuj zaproszenie</button><p id="network-note"></p></div><p class="invite-note">Milionerzy · wspólna poczekalnia</p></aside>
+      <div class="players-panel"><div class="players-heading"><h2>Wasza ekipa <span id="player-count"></span></h2><span id="ready-count"></span></div><p id="empty-room">Jeszcze tu cicho. Zaproś pierwszą osobę.</p><ul id="players" aria-label="Gracze w pokoju"></ul><div class="lobby-actions"><button type="button" class="primary" id="ready-button" hidden>Jestem gotowy/a <span aria-hidden="true">✓</span></button><button type="button" class="primary" id="start-game" hidden>Rozpocznij grę <span aria-hidden="true">→</span></button><p id="lobby-message" role="status"></p><p class="next-stage">Gdy wszyscy będą gotowi, organizator rozpocznie pierwsze pytanie.</p><button type="button" class="secondary" id="leave-room"></button><div id="close-confirm" hidden><p>Zamknąć pokój i odłączyć całą ekipę?</p><button type="button" class="primary" id="confirm-close">Tak, zamknij pokój</button><button type="button" class="secondary" id="cancel-close">Zostaw pokój otwarty</button></div></div></div></div>
+    </section>
+    <section id="game" class="network-game" hidden aria-labelledby="question-text">
+      <div class="game-bar"><div><p id="game-round" class="eyebrow"></p><span>Pokój <b id="game-code"></b></span></div><div id="game-timer" class="game-timer" role="timer"></div></div>
+      <div id="question-panel"><h1 id="question-text" tabindex="-1"></h1><div id="game-answers" class="game-answers"></div><p id="game-message" role="status" aria-live="polite"></p><button type="button" class="primary" id="advance-game" hidden></button><button type="button" class="secondary" id="finish-room" hidden></button></div>
+      <aside class="scoreboard"><h2>Ranking</h2><ol id="scoreboard"></ol></aside>
+    </section>
+    <p id="room-error" class="room-error" role="alert" hidden></p><p id="room-notice" class="room-notice" role="status"></p>
+    <p class="local-note">Gra korzysta z Supabase do synchronizacji ekranów. Wersja lokalna wymaga wspólnej sieci Wi-Fi; publiczny adres pojawi się po publikacji strony.</p>
+  </main>
+</body></html>
+
