@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Manrope:wght@400;500;600&display=swap');
 
-:root{--ink:#11120f;--paper:#f5f3ec;--paper-2:#ece9df;--lime:#c7ff19;--muted:#686a62;--line:rgba(17,18,15,.16);--radius:28px;--shell:min(1180px,calc(100% - 48px))}
+:root{--ink:#11120f;--paper:#eef1ec;--paper-2:#e5e7df;--lime:#c7ff19;--muted:#686a62;--line:rgba(17,18,15,.16);--radius:28px;--shell:min(1180px,calc(100% - 48px))}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{margin:0;background:var(--paper);color:var(--ink);font-family:"DM Sans",Arial,sans-serif;font-size:16px;line-height:1.55}
