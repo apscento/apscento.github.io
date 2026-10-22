@@ -5,15 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Apscento tworzy proste aplikacje mobilne, które rozwiązują codzienne problemy.">
   <title>Apscento — aplikacje do codziennych spraw</title>
-  <link rel="stylesheet" href="styles.css?v=8">
-  <script src="script.js?v=8" defer></script>
+  <link rel="stylesheet" href="styles.css?v=20261022">
+  <script src="script.js?v=20261022" defer></script>
+<link rel="stylesheet" href="portfolio.css?v=20261022">
 </head>
-<body data-page="home">
+<body data-page="home" class="layout-grid">
   <a class="skip-link" href="#main" data-i18n="skip">Przejdź do treści</a>
   <header class="site-header">
     <a class="brand" href="index.html" aria-label="Apscento — strona główna"><img src="logo.svg" alt="Apscento" width="250" height="64"></a>
     <nav class="nav" aria-label="Główna nawigacja">
-      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links" data-i18n-aria="menuOpen"><span></span><span></span></button>
+      <button aria-label="Otwórz menu" class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links" data-i18n-aria="menuOpen"><span></span><span></span></button>
       <div class="nav-links" id="nav-links"><a href="#apps" data-i18n="navApps">Aplikacje</a><a href="#studio" data-i18n="navStudio">Studio</a><a href="#updates" data-i18n="navUpdates">Aktualności</a><a href="gry/index.html" data-i18n="navGames">Gry</a><a href="#contact" data-i18n="navContact">Kontakt</a></div>
     </nav>
     <div class="language-switcher" aria-label="Wybór języka"><button type="button" data-lang="pl" aria-pressed="true">PL</button><button type="button" data-lang="en" aria-pressed="false">EN</button><button type="button" data-lang="uk" aria-pressed="false">UA</button></div>
@@ -26,28 +27,35 @@
       <div class="hero-actions"><a class="button button-primary" href="#apps" data-i18n="seeApps">Zobacz aplikacje</a><a class="text-link" href="mailto:apscento@gmail.com"><span data-i18n="shareIdea">Masz pomysł? Porozmawiajmy</span><span aria-hidden="true">↗</span></a></div>
       <div class="hero-note" aria-hidden="true"><span class="orbit orbit-one"></span><span class="orbit orbit-two"></span><div class="note-card"><span data-i18n="smallThings">Małe rzeczy</span><strong data-i18n="bigRelief">duża ulga.</strong></div></div>
     </section>
+
+<section class="apps section-shell portfolio" id="apps">
+ <div class="section-heading"><div><p class="overline"><span data-i18n="portfolioLabel">Narzędzia na co dzień</span></p><h2><span data-i18n="portfolioTitle">Różne sprawy.<br>Proste rozwiązania.</span></h2></div><p data-i18n="portfolioIntro">Wybierz to, co pasuje do Twojej codzienności. Resztę zostaw aplikacji.</p></div>
+ <div class="portfolio-grid"><a class="app-tile tile-fachmetr" href="fachmetr/index.html" aria-labelledby="name-fachmetr">
+ <div class="tile-top"><img class="product-icon" src="assets/apps/fachmetr.png" width="88" height="88" alt=""><span class="tile-status"><span data-i18n="fachmetrStatus">W Google Play</span></span></div>
+ <div class="tile-copy"><p class="tile-kind"><span data-i18n="fachmetrKind">Praca i remonty</span></p><h3 id="name-fachmetr">Fachmetr</h3><p data-i18n="fachmetrShort">Od pierwszego pomiaru do ostatniego rozliczenia. Cały remont pod kontrolą.</p></div>
+ <div class="tile-bottom"><span data-i18n="explore">Poznaj aplikację</span><span aria-hidden="true">↗</span></div>
+ </a><a class="app-tile tile-driverstat" href="driverstat/index.html" aria-labelledby="name-driverstat">
+ <div class="tile-top"><img class="product-icon" src="assets/apps/driverstat.png" width="88" height="88" alt=""><span class="tile-status"><span data-i18n="driverstatStatus">W rozwoju</span></span></div>
+ <div class="tile-copy"><p class="tile-kind"><span data-i18n="driverstatKind">Za kierownicą</span></p><h3 id="name-driverstat">DriverStat</h3><p data-i18n="driverstatShort">Zarobki, koszty i wynik tygodnia. Wiesz, po co jedziesz.</p></div>
+ <div class="tile-bottom"><span data-i18n="explore">Poznaj aplikację</span><span aria-hidden="true">↗</span></div>
+ </a><a class="app-tile tile-vivstat" href="vivstat/index.html" aria-labelledby="name-vivstat">
+ <div class="tile-top"><img class="product-icon" src="assets/apps/vivstat.png" width="88" height="88" alt=""><span class="tile-status"><span data-i18n="vivstatStatus">W rozwoju</span></span></div>
+ <div class="tile-copy"><p class="tile-kind"><span data-i18n="vivstatKind">Hodowla i opieka</span></p><h3 id="name-vivstat">VivStat</h3><p data-i18n="vivstatShort">Karmienie, waga i klimat. Codzienność Twojego terrarium w jednym miejscu.</p></div>
+ <div class="tile-bottom"><span data-i18n="explore">Poznaj aplikację</span><span aria-hidden="true">↗</span></div>
+ </a><a class="app-tile tile-osnowa" href="osnowa/index.html" aria-labelledby="name-osnowa">
+ <div class="tile-top"><img class="product-icon" src="assets/apps/osnowa.svg" width="88" height="88" alt=""><span class="tile-status"><span data-i18n="osnowaStatus">W testach</span></span></div>
+ <div class="tile-copy"><p class="tile-kind"><span data-i18n="osnowaKind">Dziennik i nawyki</span></p><h3 id="name-osnowa">Osnowa</h3><p data-i18n="osnowaShort">Twoje myśli, małe rytuały i wspomnienia. Z dnia na dzień bliżej siebie.</p></div>
+ <div class="tile-bottom"><span data-i18n="explore">Poznaj aplikację</span><span aria-hidden="true">↗</span></div>
+ </a></div>
+ <a class="games-strip" href="gry/index.html"><span><span data-i18n="gamesStrip">A po godzinach? Czas na grę.</span></span><span><span data-i18n="gamesLink">Odkryj gry Apscento</span> ↗</span></a>
+ </section>
     <section class="statement section-shell" id="studio">
       <p class="section-number">01</p>
       <div><p class="overline" data-i18n="ourApproach">Nasze podejście</p><h2 data-i18n="studioHeading">Każda aplikacja ma jeden konkretny powód, żeby istnieć.</h2><p class="section-copy" data-i18n="studioCopy">Apscento powstało z prostej obserwacji: wiele codziennych problemów nadal rozwiązujemy kartką, kalkulatorem albo pamięcią. Szukamy właśnie takich momentów i zamieniamy je w przejrzyste aplikacje.</p></div>
     </section>
-    <section class="apps section-shell" id="apps">
-      <div class="section-heading"><div><p class="overline" data-i18n="ourApps">Nasze aplikacje</p><h2 data-i18n="builtForLife">Zaprojektowane pod<br>codzienne używanie.</h2></div><p data-i18n="appsIntro">Każdy projekt zaczyna się od jednego, prawdziwego problemu. Reszta ma po prostu działać.</p></div>
-      <article class="project-card project-driver">
-        <div class="project-content"><span class="status"><i></i><span data-i18n="inDevelopment">W aktywnym rozwoju</span></span><p class="project-index">01 / DRIVERSTAT</p><h3 data-i18n="driverHeadline">Wiesz, ile zarabiasz. Zanim przyjdzie rozliczenie.</h3><p data-i18n="driverSummary">DriverStat pomaga kierowcom na bieżąco szacować zarobki, koszty i wynik tygodnia — bez ręcznego przeliczania każdej zmiany.</p><a class="button button-dark" href="driverstat/index.html"><span data-i18n="discoverDriver">Poznaj DriverStat</span><span aria-hidden="true">→</span></a></div>
-        <div class="driver-visual"><img class="app-screen app-screen-home" src="driverstat/screenshots/01-pulpit.png?v=7" alt="Rzeczywisty pulpit aplikacji DriverStat z przykładowymi danymi" width="1280" height="2856" loading="lazy"></div>
-      </article>
-      <article class="project-card project-fachmetr">
-        <div class="project-content"><span class="status"><i></i><span data-i18n="availableGooglePlay">Dostępna w Google Play</span></span><p class="project-index">02 / FACHMETR</p><h3 data-i18n="fachHeadline">Od pomiaru do rozliczenia. Jedno miejsce na cały remont.</h3><p data-i18n="fachSummary">Fachmetr pomaga fachowcom przygotować wycenę, pilnować zakresu prac, materiałów i terminów — także bez internetu.</p><a class="button button-dark" href="fachmetr/index.html"><span data-i18n="discoverFach">Poznaj Fachmetr</span><span aria-hidden="true">→</span></a></div>
-        <div class="fachmetr-visual"><img class="app-screen app-screen-home" src="fachmetr/screenshots/01-start.png" alt="Rzeczywisty ekran startowy aplikacji Fachmetr z przykładowymi danymi" width="1280" height="2856" loading="lazy"></div>
-      </article>
-      <article class="project-card project-viv">
-        <div class="project-content"><span class="status"><i></i><span data-i18n="inDevelopment">W aktywnym rozwoju</span></span><p class="project-index">03 / VIVSTAT</p><h3 data-i18n="vivHeadline">Dziennik terrarium. Karmienie, waga i klimat w jednym miejscu.</h3><p data-i18n="vivSummary">VivStat pomaga hodowcom gadów, płazów i bezkręgowców zapisywać karmienia, wagę i klimat zbiornika oraz przypomina o tym, co ważne — nawet bez internetu.</p><a class="button button-dark" href="vivstat/index.html"><span data-i18n="discoverViv">Poznaj VivStat</span><span aria-hidden="true">→</span></a></div>
-        <div class="viv-visual-photo"><img class="app-screen app-screen-home" src="vivstat/screenshots/01-hodowla.png" alt="Rzeczywisty pulpit aplikacji VivStat z przykładowymi danymi" width="1280" height="2856" loading="lazy"></div>
-      </article>
-    </section>
     <section class="updates section-shell" id="updates">
       <div class="section-heading compact"><div><p class="overline" data-i18n="fromStudio">Ze studia</p><h2 data-i18n="whatHappens">Co dzieje się teraz.</h2></div><p data-i18n="honestUpdates">Bez wielkich zapowiedzi. Krótkie i uczciwe informacje o tym, nad czym pracujemy.</p></div>
-      <div class="update-list">
+      <div class="update-list"><article><time datetime="2026-10" data-i18n="october2026">Październik 2026</time><div><span class="pill">Osnowa</span><h3><span data-i18n="osUpdateTitle">Dziennik i nawyki połączone w jeden rytm</span></h3><p data-i18n="osUpdateBody">Testujemy pierwszą wersję Osnowy na Androida: poranne i wieczorne wpisy, nawyki, kalendarz oraz zdjęcie dnia.</p></div></article>
         <article><time datetime="2026-09" data-i18n="september2026">Wrzesień 2026</time><div><span class="pill">VivStat</span><h3 data-i18n="updateVivTitle">Dziennik terrarium ma już karmienia, wagę i przypomnienia</h3><p data-i18n="updateVivCopy">Prototyp VivStat zapisuje zbiorniki, mieszkańców i wpisy dziennika lokalnie na telefonie, wysyła przypomnienia o karmieniu i pozwala zrobić kopię zapasową danych.</p></div></article>
         <article><time datetime="2026-10" data-i18n="october2026">Październik 2026</time><div><span class="pill">Fachmetr</span><h3 data-i18n="updateFachTitle">Fachmetr oficjalnie dostępny w Google Play</h3><p data-i18n="updateFachCopy">Pierwsza publiczna wersja łączy klientów, pomiary, wyceny, materiały, rozliczenia, PDF-y, kopie zapasowe i kalendarz. Aplikację można już pobrać na Androida.</p></div></article>
         <article><time datetime="2026-08" data-i18n="august2026">Sierpień 2026</time><div><span class="pill">DriverStat</span><h3 data-i18n="updateDriverTitle">Pierwsza wersja robocza nabiera kształtu</h3><p data-i18n="updateDriverCopy">Powstał podstawowy panel statystyk kierowcy i mechanizm szacowania wyniku tygodnia. Kolejny krok to testy i dopracowanie codziennej obsługi.</p></div></article>
