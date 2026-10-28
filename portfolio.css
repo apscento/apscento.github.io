@@ -13,6 +13,7 @@ body[data-page=home] .statement h2{font-size:clamp(2rem,4vw,3.6rem)}
 .app-tile:focus-visible{outline:3px solid #20777f;outline-offset:4px}
 .tile-driverstat{--tile-accent:#4dd8ec;background:#0c202b}
 .tile-vivstat{--tile-accent:#d4d8ad;background:#e2e6d8;color:#293026}
+.tile-finstat{--tile-accent:#b4d9ff;background:#0b1728;color:#f5f8fc}
 .tile-osnowa{--tile-accent:#e2c58b;background:#542237;color:#fbf2eb}
 .tile-top{display:flex;align-items:flex-start;justify-content:space-between;gap:18px}
 .product-icon{width:76px;height:76px;object-fit:contain;border-radius:18px;flex-shrink:0}

@@ -2,6 +2,10 @@
 .app-detail{--app-bg:#f0f3f4;--app-dark:#0c202b;--app-accent:#53d9eb;--app-ink:#203945;--app-muted:#586b73;--app-soft:#e0e9eb;--app-border:#bccdd1;--app-light:#e4f6fa;background:var(--app-bg)}
 .app-fachmetr{--app-bg:#f1f3e9;--app-dark:#1b2114;--app-accent:#c7ff19;--app-ink:#303c20;--app-muted:#637052;--app-soft:#e3e9d6;--app-border:#bec9ac;--app-light:#edf4db}
 .app-vivstat{--app-bg:#f4f1e8;--app-dark:#29352a;--app-accent:#d4d8ad;--app-ink:#354332;--app-muted:#64705b;--app-soft:#e5e7d8;--app-border:#c0c7ad;--app-light:#f1f0dc}
+.app-finstat{--app-bg:#f5f8fc;--app-dark:#0b1728;--app-accent:#68b5ff;--app-ink:#142b47;--app-muted:#5b6d82;--app-soft:#e5eef8;--app-border:#b8cce0;--app-light:#edf6ff}
+.app-finstat .os-wordmark{font-family:Manrope,sans-serif;font-weight:700}
+.app-finstat .os-phone{border-color:#07111f;box-shadow:0 30px 65px #02091380}
+.app-finstat .fin-gallery{grid-template-columns:repeat(3,minmax(0,1fr));max-width:900px;margin-inline:auto}
 .app-detail .os-hero{background:var(--app-dark);color:var(--app-light)}
 .app-detail .os-kicker{color:var(--app-accent)}
 .app-detail .os-lead{color:var(--app-light);opacity:.85}
