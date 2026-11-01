@@ -38,3 +38,6 @@
 .app-detail .os-availability .hero-actions{justify-content:center}
 .app-detail .os-availability .text-link{color:var(--app-ink)}
 @media(max-width:700px){.app-detail .os-hero-inner{grid-template-columns:minmax(0,1fr)}.app-detail .os-hero h1{font-size:clamp(2.25rem,8.8vw,3.8rem)}.app-detail .os-hero-art{padding:35px 0 50px}.app-detail .os-section-head>p:not(.overline){margin-top:18px}.app-detail .progress-section{padding:50px 0}.app-detail .faq{padding:45px 0 60px}.app-detail .os-gallery figcaption{align-items:flex-start}.app-detail .os-gallery figcaption>span:last-child{min-width:0}.app-detail .progress-section .section-heading{grid-template-columns:1fr;gap:20px}}
+
+/* DriverStat: current charcoal / mint identity. */
+.app-driverstat{--app-bg:#f0f5f3;--app-dark:#10171b;--app-accent:#28dfc1;--app-ink:#203c36;--app-muted:#576e67;--app-soft:#e0ede7;--app-border:#b8cfc4;--app-light:#e4f8f1}
