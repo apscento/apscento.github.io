@@ -15,6 +15,7 @@ body[data-page=home] .statement h2{font-size:clamp(2rem,4vw,3.6rem)}
 .tile-vivstat{--tile-accent:#d4d8ad;background:#e2e6d8;color:#293026}
 .tile-finstat{--tile-accent:#b4d9ff;background:#0b1728;color:#f5f8fc}
 .tile-osnowa{--tile-accent:#e2c58b;background:#542237;color:#fbf2eb}
+.tile-paczka{--tile-accent:#ffca3a;background:#1d3657;color:#fff8ea}
 .tile-top{display:flex;align-items:flex-start;justify-content:space-between;gap:18px}
 .product-icon{width:76px;height:76px;object-fit:contain;border-radius:18px;flex-shrink:0}
 .tile-status{font-size:11px;letter-spacing:.03em;border:1px solid currentColor;border-radius:30px;padding:7px 11px;opacity:.85}
